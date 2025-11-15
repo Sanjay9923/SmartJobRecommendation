@@ -1,8 +1,17 @@
 # Smart Job Recommendation System
+
 ## Overview
 
 The Smart Job Recommendation System is a machine-learning powered application that helps match candidates with suitable job opportunities. It compares resume content with job descriptions using NLP methods and provides a list of recommended job roles based on similarity scores.
 The system offers a simple web interface where users can upload resumes and instantly view personalized job matches.
+
+
+## Screenshot
+
+### Job-Matching-Interface.png
+
+<img width="1920" height="1080" alt="Screenshot (1)" src="https://github.com/user-attachments/assets/a03d44b2-3fc3-42cf-b012-79007d3c2cb4" />
+
 
 ## Features
 
@@ -26,166 +35,81 @@ The system offers a simple web interface where users can upload resumes and inst
 4. A match score (in percentage) is calculated based on overlapping skills.
  
 5. The system outputs the *top 5 job recommendations* sorted by match score.
+
+
+## Project Structure
+
+Smart Job Recommendation/
+│
+
+├── smart_job_recommend.py     # Main Python script for recommendations
+
+├── database.py                # Database helper functions
+
+├── JobRecommendationGUI.java  # Java GUI version
+
+└── jobs.db                    # SQLite database with job records
    
 
-## Tech Stack
-**Frontend**: HTML, CSS
+## Getting Started
 
-**Backend**: Python (Flask Framework)
+This project runs as a Java-based desktop application. You don’t need a web server or Python setup. Just compile and run the Java GUI file.
 
-**Database**: SQLite (jobs.db)
-
-**Machine Learning / NLP**: scikit-learn (TF-IDF, Cosine Similarity), Pandas
-
-**Libraries / Tools**: numpy, sqlite3, Flask,Jinja2
-
-
-## Installation & Setup
-
-1.**Clone the Repository**
+1.**Clone or Download the Project**
 
 git clone https://github.com/Sanjay9923/SmartJobRecommendation.git
 cd SmartJobRecommendation
 
-2.**Set Up the Environment**
+2.**Compile the Java File**
 
-Make sure Python 3 is installed.
+Open CMD inside the project folder and run:
 
-Create and activate a virtual environment (recommended):
+javac JobRecommendationGUI.java
 
-python -m venv venv
+This will generate the .class file.
 
+3.**Run the Application**
+java JobRecommendationGUI
 
-Windows
+The Smart Job Recommendation System window will open automatically.
 
-venv\Scripts\activate
+4.**Enter Your Skills**
 
-Install required libraries:
+Type your skills in the input box (comma separated), for example:
 
-pip install -r requirements.txt
+Python, Java, HTML, CSS, JavaScript
 
-3.**Prepare the Database**
-
-This project uses SQLite for storing job listings.
-
-Run the database setup script:
-
-python create_jobs_db.py
+Click Get Recommendations, and the system will show matching job roles with percentage scores.
 
 
-This creates:
+## Technologies Used
 
-jobs.db
+**Frontend**: Java Swing (GUI)
 
+**Backend**: Python (Core logic for job matching)
 
-with sample job entries, including:
+**Database**: SQLite (jobs.db)
 
-job_title
-
-company
-
-skills_required
-
-If you want to manually create the table instead, use:
-
-CREATE TABLE jobs (
-    job_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    job_title TEXT,
-    company TEXT,
-    skills_required TEXT
-);
+**Libraries / Tools**: JDBC (database connection), sqlite-jdbc driver, sqlite3 (Python DB API), Java AWT/Swing components
 
 
-Insert sample jobs:
+## Future Improvements
 
-INSERT INTO jobs (job_title, company, skills_required)
-VALUES
-('Python Developer', 'Google', 'python, flask, sql'),
-('Data Analyst', 'TCS', 'python, excel, sql'),
-('Machine Learning Engineer', 'Amazon', 'python, ml, numpy, pandas');
+- Add a Flask or Django web interface for easier user interaction.
 
-4.**Run the Application (Flask Server)**
+- Include resume parsing and NLP-based skill extraction.
 
-Start the job recommendation system:
+- Integrate APIs for real-time job listings.
 
-python app.py
-
-5.**Use the System**
-
-Open your browser and go to:
-
-http://127.0.0.1:5000/
-
-
-Upload your resume or enter your skills to receive job recommendations.
-
-Example input:
-
-Enter your skills (comma separated): Python, Flask, SQL
-
-
-Example output:
-
-Top Job Recommendations:
-Job: Python Developer — Google — Match: 100%
-Job: Data Analyst — TCS — Match: 65%
-
-
-## Project Structure
-SmartJobRecommendation/
-│
-├── app.py # Main Flask application
-├── create_jobs_db.py        # Script to create SQLite job database
-│
-
-├── templates/               # HTML templates
-│   └── index.html           # Resume upload / skill input page
-│
-
-├── static/                  # CSS / JS / Images
-│   └── css/style.css
-│
-└── jobs.db                  # Auto-generated SQLite database
-
-
-## System Architecture
-
-User Input (Resume / Skills)
-          ↓
-Flask Backend
-          ↓
-NLP Text Cleaning & Preprocessing
-          ↓
-TF-IDF Vectorization
-          ↓
-Cosine Similarity Scoring
-          ↓
-Recommendation Engine (Ranking)
-          ↓
-SQLite Database (jobs.db)
-          ↓
-Top Job Recommendations Display
-
-
-## Future Enhancements
-
-Add a Flask or Django web interface for easier user interaction.
-
-Include resume parsing and NLP-based skill extraction.
-
-Integrate APIs for real-time job listings.
-
-Add user authentication and job application tracking.
+- Add user authentication and job application tracking.
 
 
 ## Project Contributor
 
-**Sanjay.s** — Developer and Project Lead 
+Sanjay.s — Developer and Project Lead 
+
 Contributions are welcome. Feel free to submit pull requests or suggest improvements.
 
 
-## License
-
-This project is open-source and available under the MIT License.
 
 
