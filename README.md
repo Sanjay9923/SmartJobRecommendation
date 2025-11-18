@@ -6,11 +6,11 @@ The Smart Job Recommendation System is a machine-learning powered application th
 The system offers a simple web interface where users can upload resumes and instantly view personalized job matches.
 
 
-## Screenshot
+## Preview (Screenshot)
 
 ### Job-Matching-Interface.png
 
-<img width="1920" height="1080" alt="Screenshot (1)" src="https://github.com/user-attachments/assets/a03d44b2-3fc3-42cf-b012-79007d3c2cb4" />
+![Screenshot (1)](https://github.com/user-attachments/assets/7e76bfcc-a07a-4f30-b217-d9ae7e047e81)
 
 
 ## Features
@@ -38,47 +38,45 @@ The system offers a simple web interface where users can upload resumes and inst
 
 
 ## Project Structure
-
+```bash
 Smart Job Recommendation/
 │
-
 ├── smart_job_recommend.py     # Main Python script for recommendations
-
 ├── database.py                # Database helper functions
-
 ├── JobRecommendationGUI.java  # Java GUI version
-
 └── jobs.db                    # SQLite database with job records
-   
+```   
+
 
 ## Getting Started
 
 This project runs as a Java-based desktop application. You don’t need a web server or Python setup. Just compile and run the Java GUI file.
 
 1.**Clone or Download the Project**
-
+```bash
 git clone https://github.com/Sanjay9923/SmartJobRecommendation.git
 cd SmartJobRecommendation
-
+```
 2.**Compile the Java File**
 
 Open CMD inside the project folder and run:
-
+```bash
 javac JobRecommendationGUI.java
-
+```
 This will generate the .class file.
 
 3.**Run the Application**
+```bash
 java JobRecommendationGUI
-
+```
 The Smart Job Recommendation System window will open automatically.
 
 4.**Enter Your Skills**
 
 Type your skills in the input box (comma separated), for example:
-
+```bash
 Python, Java, HTML, CSS, JavaScript
-
+```
 Click Get Recommendations, and the system will show matching job roles with percentage scores.
 
 
@@ -104,12 +102,14 @@ Click Get Recommendations, and the system will show matching job roles with perc
 - Add user authentication and job application tracking.
 
 
-## Project Contributor
+##  Author
 
 Sanjay.s — Developer and Project Lead 
 
 Contributions are welcome. Feel free to submit pull requests or suggest improvements.
 
 
+## License
 
+This project is **free to use** and does not contains any license.
 
