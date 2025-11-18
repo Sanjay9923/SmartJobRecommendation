@@ -10,7 +10,7 @@ The system offers a simple web interface where users can upload resumes and inst
 
 ### Job-Matching-Interface.png
 
-![Screenshot (1)](https://github.com/user-attachments/assets/7e76bfcc-a07a-4f30-b217-d9ae7e047e81)
+![Screenshot  (1)](https://github.com/user-attachments/assets/4457e240-314a-4948-bb9f-8882fd2ec0a0)
 
 
 ## Features
