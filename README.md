@@ -38,6 +38,7 @@ The system offers a simple web interface where users can upload resumes and inst
 
 
 ## Project Structure
+
 ```bash
 Smart Job Recommendation/
 │
